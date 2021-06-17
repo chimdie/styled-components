@@ -13,7 +13,11 @@ const Button = styled.button`
     css`
       background: transparent;
       color: red;
+
     `}
+    &:hover{
+      color: red;
+    }
 `;
 
 const Config = () => {
