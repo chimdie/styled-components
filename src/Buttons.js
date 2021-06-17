@@ -2,25 +2,25 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
 const Button = styled.button`
-  background: #222;
-  color: #fff;
+  background: #516174;
+  color: #ffffff;
   padding: 0.7rem 1.5rem;
   border-radius: 0.5rem;
-  margin: 0 1em;
+  justify-content: flex-end;
+  border: none;
 
   ${(props) =>
-    props.pri &&
+    props.pre &&
     css`
       background: transparent;
       color: red;
-
     `}
-    &:hover{
-      color: red;
-    }
+  &:hover {
+    color: red;
+  }
 `;
 
-const Config = () => {
+const Buttons = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = () => {
@@ -28,9 +28,9 @@ const Config = () => {
   };
   return (
     <div onClick={handleChange}>
-      {loading ? <Button>button</Button> : <Button pri>button</Button>}
+      {loading ? <Button>Click</Button> : <Button pre>Click_b</Button>}
     </div>
   );
 };
 
-export default Config;
+export default Buttons;
