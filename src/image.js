@@ -7,7 +7,7 @@ import tom from "../public/images/tom.jpg";
 
 const images = [
   {
-    img: bur,
+    img: 'https://user-images.githubusercontent.com/47675587/101560405-8522fa00-39c3-11eb-9184-26040bfb88c0.jpg',
     name: "Yummy Burger",
   },
   {
