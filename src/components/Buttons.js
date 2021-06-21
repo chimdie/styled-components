@@ -12,13 +12,13 @@ const Button = styled.button`
   // transition: 100ms ease-in;
 
   padding: 1rem;
-	width: 100%;
-	border: none;
-	background: #516174;
-	color: #ffffff;
-	font-size: 1rem;
-	font-weight: bolder;
-	transition: background 200ms ease-in, color 200ms ease-in;
+  width: 100%;
+  border: none;
+  background: #516174;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: background 200ms ease-in, color 200ms ease-in;
 
   ${(props) =>
     props.pre &&
@@ -32,6 +32,17 @@ const Button = styled.button`
   }
 `;
 
+const Btn = styled.a`
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+  border: 2px solid white;
+  background: ${(props) => (props.primary ? "white" : "palevioletred")}
+  color: ${(props) => (props.primary ? "palevioletred" : "white")}
+`;
+
 const Buttons = () => {
   const [loading, setLoading] = useState(false);
 
@@ -40,10 +51,9 @@ const Buttons = () => {
   };
   return (
     <div onClick={handleChange}>
-      {/* {loading ? <Button>Click</Button> : <Button pre>Click_b</Button>} */}
-      <Button>Order</Button>
+      {loading ? <Button>Click</Button> : <Button pre>Clicked!</Button>}
     </div>
   );
 };
 
-export default Buttons;
+export default Button;
